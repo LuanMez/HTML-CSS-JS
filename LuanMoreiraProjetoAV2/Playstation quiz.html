@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fã Playstation</title>
+		<meta charset="utf-8">
+		<style>
+			.header{
+				background-color: blue;
+				background-image: linear-gradient(#1E90FF, #00008B);
+				padding:75px;
+			}
+			.titulo{
+				width: 200px;
+				height: 50px;
+				position:absolute;
+				left:5%;
+				top:10%
+			}
+			body{
+				background-color:#FFFFFF;
+				font-family: Arial;
+				margin: 0;
+			}
+			footer{
+				background-color: blue;
+				background-image: linear-gradient(#1E90FF, #00008B);
+				color: #FFFFFF;
+				width: 100%;
+				height: 150px;
+				position: absolute;
+				margin-top:20px;
+			}
+			.historia{
+				color:white;
+				text-transform: uppercase;
+				text-decoration: none;
+				position:absolute;
+				left:37%;
+			}
+			.comparativo{
+				color:white;
+				text-transform: uppercase;
+				text-decoration: none;
+				position:absolute;
+				left:45%;
+			}
+			.quiz{
+				color:white;
+				text-transform: uppercase;
+				text-decoration: none;
+				position:absolute;
+				left:56%;
+			}
+			aside{
+				height: 0px;
+				top: 0px;
+				bottom:0px;
+				position: sticky;
+			}
+			.quizCaixa {
+				margin: 20px;
+				padding: 20px;
+				border: 2px solid #00008B;
+				background-color: #1E90FF;
+				width:300px;
+				text-align:center;
+				margin-left: 500px;
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			#result {
+				margin-top: 20px;
+			}
+			#contato{
+				margin: 20px;
+				padding: 20px;
+				border: 2px solid #00008B;
+				background-color: #1E90FF;
+				width:300px;
+				text-align:center;
+				margin-left: 500px;
+			}
+			#contato input,textarea{
+				display: block;
+				margin-bottom: 10px;
+				width: 290px;
+			}
+			.youtube{
+				position:absolute;
+				margin-left: 100px;
+			}
+			.facebook{
+				position:absolute;
+				margin-left: 60px;
+			}
+			.instagram{
+				position:absolute;
+				margin-left: 20px;
+			}
+			.twitter{
+				position:absolute;
+				margin-left: 150px;
+			}
+			.sessao{
+				width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="header">
+			<header>
+				<img src="Imagem\Titulo.png" class="titulo">
+				<a class="historia" onMouseOut="this.style.color='#FFFFFF'" onMouseOver="this.style.color='#000000'" href='Playstation historia.html'>História</a>
+				<a class="comparativo" onMouseOut="this.style.color='#FFFFFF'" onMouseOver="this.style.color='#000000'" href='Playstation comparativo.html'>Comparativo</a>
+				<a class="quiz" onMouseOut="this.style.color='#FFFFFF'" onMouseOver="this.style.color='#000000'" href='Playstation quiz.html'>Quiz</a>
+			</header>
+		</div>
+		<aside>
+			<img src="Imagem\banner2.png">
+		</aside>
+		<div class="quizCaixa">
+			<h2>Quiz Playstation</h2>
+			<form id="quizForm">
+				<div id="question1">
+					<h3>Qual ano o Playstation 1 foi lançado?</h3>
+					<label>
+						<input type="radio" name="answer1" value="a"> 1994
+					</label>
+					<label>
+						<input type="radio" name="answer1" value="b"> 1995
+					</label>
+					<label>
+						<input type="radio" name="answer1" value="c"> 1996
+					</label>
+					<label>
+						<input type="radio" name="answer1" value="d"> 1998
+					</label>
+					<label>
+						<input type="radio" name="answer1" value="e"> 2000
+					</label>
+					<button type="button" onclick="nextQuestion('question1')">Próxima pergunta</button>
+				</div>
+
+				<div id="question2" style="display: none;">
+					<h3>Qual o controle do Playstation 5?</h3>
+					<label>
+						<input type="radio" name="answer2" value="a"> Dualshock 2
+					</label>
+					<label>
+						<input type="radio" name="answer2" value="b"> Dualsense
+					</label>
+					<label>
+						<input type="radio" name="answer2" value="c"> Dualshock 
+					</label>
+					<label>
+						<input type="radio" name="answer2" value="d"> Dualshock 3
+					</label>
+					<label>
+						<input type="radio" name="answer2" value="e"> Dualshock 5
+					</label>
+					<button type="button" onclick="nextQuestion('question2')">Próxima pergunta</button>
+				</div>
+
+				<div id="question3" style="display: none;">
+					<h3>Qual a midia utilizada no Playstation 2?</h3>
+					<label>
+						<input type="radio" name="answer3" value="a"> CD
+					</label>
+					<label>
+						<input type="radio" name="answer3" value="b"> UMD
+					</label>
+					<label>
+						<input type="radio" name="answer3" value="c"> DVD
+					</label>
+					<label>
+						<input type="radio" name="answer3" value="d"> Cartucho
+					</label>
+					<label>
+						<input type="radio" name="answer3" value="e"> Blu-Ray
+					</label>
+					<button type="button" onclick="nextQuestion('question3')">Próxima pergunta</button>
+				</div>
+
+				<div id="question4" style="display: none;">
+					<h3>Qual foi o console mais vendido?</h3>
+					<label>
+						<input type="radio" name="answer4" value="a"> Playstation 2
+					</label>
+					<label>
+						<input type="radio" name="answer4" value="b"> Playstation 5
+					</label>
+					<label>
+						<input type="radio" name="answer4" value="c"> Playstation
+					</label>
+					<label>
+						<input type="radio" name="answer4" value="d"> Playstation 3
+					</label>
+					<label>
+						<input type="radio" name="answer4" value="e"> Playstation 4
+					</label>
+					<button type="button" onclick="nextQuestion('question4')">Próxima pergunta</button>
+				</div>
+
+				<div id="question5" style="display: none;">
+					<h3>Qual modelo de PSP tem bluetooth?</h3>
+					<label>
+						<input type="radio" name="answer5" value="a"> PSP 3000
+					</label>
+					<label>
+						<input type="radio" name="answer5" value="b"> PSP go
+					</label>
+					<label>
+						<input type="radio" name="answer5" value="c"> PSP 2000
+					</label>
+					<label>
+						<input type="radio" name="answer5" value="d"> PSP Street
+					</label>
+					<label>
+						<input type="radio" name="answer5" value="e"> PSP 1000
+					</label>
+					<button type="button" onclick="nextQuestion('question5')">Próxima pergunta</button>
+				</div>
+		  
+				<div id="question6" style="display: none;">
+					<h3>Qual o primeiro console que teve Wi-Fi?</h3>
+					<label>
+						<input type="radio" name="answer6" value="a"> Playstation 4
+					</label>
+					<label>
+						<input type="radio" name="answer6" value="b"> Playstation 3
+					</label>
+					<label>
+						<input type="radio" name="answer6" value="c"> PSvita
+					</label>
+					<label>
+						<input type="radio" name="answer6" value="d"> PSP
+					</label>
+					<label>
+						<input type="radio" name="answer6" value="e"> Playstation 2
+					</label>
+					<button type="button" onclick="nextQuestion('question6')">Próxima pergunta</button>
+				</div>
+		  
+				<div id="question7" style="display: none;">
+					<h3>Qual primeiro console atingir FHD?</h3>
+					<label>
+						<input type="radio" name="answer7" value="a"> PSvita
+					</label>
+					<label>
+						<input type="radio" name="answer7" value="b"> PSP
+					</label>
+					<label>
+						<input type="radio" name="answer7" value="c"> Playstation 5
+					</label>
+					<label>
+						<input type="radio" name="answer7" value="d"> Playstation 4
+					</label>
+					<label>
+						<input type="radio" name="answer7" value="e"> Playstation 3
+					</label>
+					<button type="button" onclick="nextQuestion('question7')">Próxima pergunta</button>
+				</div>
+		  
+				<div id="question8" style="display: none;">
+					<h3>Qual console que menos vendeu e não fabrica mais?</h3>
+					<label>
+						<input type="radio" name="answer8" value="a"> Playstation 3
+					</label>
+					<label>
+						<input type="radio" name="answer8" value="b"> PSP
+					</label>
+					<label>
+						<input type="radio" name="answer8" value="c"> PSvita
+					</label>
+					<label>
+						<input type="radio" name="answer8" value="d"> Playstation 2
+					</label>
+					<label>
+						<input type="radio" name="answer8" value="e"> Playstation 1
+					</label>
+					<button type="button" onclick="nextQuestion('question8')">Próxima pergunta</button>
+				</div>
+		  
+				<div id="question9" style="display: none;">
+					<h3>Qual console é portatil?</h3>
+					<label>
+						<input type="radio" name="answer9" value="a"> Playstation 1
+					</label>
+					<label>
+						<input type="radio" name="answer9" value="b"> Playstation 2
+					</label>
+					<label>
+						<input type="radio" name="answer9" value="c"> Playstation 3
+					</label>
+					<label>
+						<input type="radio" name="answer9" value="d"> Playstation 4
+					</label>
+					<label>
+						<input type="radio" name="answer9" value="e"> PSP
+					</label>
+					<button type="button" onclick="nextQuestion('question9')">Próxima pergunta</button>
+				</div>
+		  
+				<div id="question10" style="display: none;">
+					<h3>Qual foi o primeiro controle com vibração?</h3>
+					<label>
+						<input type="radio" name="answer10" value="a"> Dualshock
+					</label>
+					<label>
+						<input type="radio" name="answer10" value="b"> Dual Analog
+					</label>
+					<label>
+						<input type="radio" name="answer10" value="c"> Dualsense
+					</label>
+					<label>
+						<input type="radio" name="answer10" value="d"> Dualshock 2
+					</label>
+					<label>
+						<input type="radio" name="answer10" value="e"> Dualshock 3
+					</label>
+					<button type="button" onclick="showResult()">Enviar</button>
+				</div>
+			</form>
+		</div>
+
+		<script>
+			var questaoAtual = 1; // exibindo ao usúario o resultado do quiz
+			var totalDeQuestoes = 10; // valor total de acertos
+
+			function nextQuestion(questionId){
+				document.getElementById(questionId).style.display = "none";
+
+				questaoAtual++;
+				if (questaoAtual <= totalDeQuestoes){
+					var nextQuestionId = "question" + questaoAtual;
+					document.getElementById(nextQuestionId).style.display = "block";
+				}
+			}	
+
+			function showResult(){
+				var answers = {
+					answer1: document.querySelector('input[name="answer1"]:checked').value,
+					answer2: document.querySelector('input[name="answer2"]:checked').value,
+					answer3: document.querySelector('input[name="answer3"]:checked').value,
+					answer4: document.querySelector('input[name="answer4"]:checked').value,
+					answer5: document.querySelector('input[name="answer5"]:checked').value,
+					answer6: document.querySelector('input[name="answer6"]:checked').value,
+					answer7: document.querySelector('input[name="answer7"]:checked').value,
+					answer8: document.querySelector('input[name="answer8"]:checked').value,
+					answer9: document.querySelector('input[name="answer9"]:checked').value,
+					answer10: document.querySelector('input[name="answer10"]:checked').value
+				};
+				
+				//declarando a variaveil questaoCerta
+				var questaoCerta = 0;
+				
+				// opção certa de cada alternativa, caso seja soma 1
+				if (answers.answer1 === "a") {
+					questaoCerta++;
+				}
+				if (answers.answer2 === "b") {
+					questaoCerta++;
+				}
+				if (answers.answer3 === "c") {
+					questaoCerta++;
+				}
+				if (answers.answer4 === "a") {
+					questaoCerta++;
+				}
+				if (answers.answer5 === "b") {
+					questaoCerta++;
+				}
+				if (answers.answer6 === "d") {
+					questaoCerta++;
+				}
+				if (answers.answer7 === "e") {
+					questaoCerta++;
+				}
+				if (answers.answer8 === "c") {
+					questaoCerta++;
+				}
+				if (answers.answer9 === "e") {
+					questaoCerta++;
+				}
+				if (answers.answer10 === "a") {
+					questaoCerta++;
+				}
+
+				// exibindo ao usúario o resultado do quiz
+				var resultText = "";
+				if (questaoCerta === totalDeQuestoes) { //se todas as opções forem certas
+					resultText = "Parabéns! Você acertou todas as perguntas é um verdadeiro fã Playstation.";
+				} else {
+					resultText = "Você não acertou todas as perguntas. Tente novamente!";
+				}
+
+				alert(resultText);
+			}
+		</script>
+	
+		<form id="contato">
+			<h1>Contate-nos</h1>
+			<input type="text" style="background-color: #87CEEB;" id="nome" placeholder="Nome" required>
+			<input type="text" style="background-color: #87CEEB;" id="sobrenome" placeholder="Sobrenome" required>
+			<input type="email" style="background-color: #87CEEB;" id="email" placeholder="Email" required>
+			<input type="tel" style="background-color: #87CEEB;" id="telefone" placeholder="Telefone" required>
+			<input type="text" style="background-color: #87CEEB;" id="endereco" placeholder="Endereço" required>
+			<textarea id="message" style="height: 100px; background-color: #87CEEB;" placeholder="Digite sua mensagem aqui" required></textarea>
+			<button type="submit">Enviar</button>
+		</form>
+
+		<script>
+			document.getElementById("contato").addEventListener("submit", function(event) {
+				event.preventDefault(); // Evita o envio do formulário por padrão
+
+				// obtendo os valores preenchidos pelo usuário
+				var nome = document.getElementById("nome").value;
+				var sobrenome = document.getElementById("sobrenome").value;
+				var email = document.getElementById("email").value;
+				var telefone = document.getElementById("telefone").value;
+				var endereco = document.getElementById("endereco").value;
+				var message = document.getElementById("message").value;
+
+				// envio dos dados do formulário (aqui, exibindo apenas um alerta)
+				alert("Sua mensagem foi enviada! Em breve nos responderemos");
+
+				// limpando os campos do formulário
+				document.getElementById("contato").reset();
+			});
+		</script>
+		<footer>
+			<h5 style="margin-left: 20px;">Este site foi feito por apreciadores da marca Playstation e não é associado à Sony Interactive Entertainment. © Todas as imagens e vídeos são marcas registradas dos seus proprietários.</h5>
+			<h5 style="margin-left: 20px;">Siga nossas redes sociais: </h5>
+			<a class="instagram" href="https://www.instagram.com/playstation/"> <img src="imagem\instagram.png" width="25px" height="25px"></a>
+			<a class="facebook" href="https://www.facebook.com/PlayStationBR/?locale=pt_BR"> <img src="imagem\facebook.png" width="25px" height="25px"></a>
+			<a class="youtube" href="https://www.youtube.com/channel/UC-2Y8dQb0S6DtpxNgAKoJKA"> <img src="imagem\youtube.png" width="35px" height="25px"></a>
+			<a class="twitter" href="https://twitter.com/PlayStation"> <img src="imagem\twitter1.png" width="25px" height="25px"></a>
+		</footer>
+	</body>
+</html>	
